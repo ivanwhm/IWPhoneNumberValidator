@@ -1,3 +1,6 @@
+Validador de números telefônicos brasileiros para Yii 1.x
+=========================================================
+
 Esta extensão é um validador de números telefônicos brasileiros através da utilização de expressões regulares. Podem ser validados somente números móveis (celulares) ou qualquer outro tipo de número telefônico, desde que o mesmo contenha o respectivo DDD. 
 
 A extensão pode ainda validar números com ou sem máscara, sendo que caso contenha máscara, a mesma deve seguir o padrão: (99) 9999-9999 ou (99) 99999-9999, caso o telefone seja móvel e contenha o nono dígito.
@@ -12,7 +15,7 @@ Testes foram realizados somente na versão 1.1.x.
 
 ##Uso
 
-Copie o arquivo IWPhoneNumberValidator para o diretório 
+Copie o arquivo IWPhoneNumberValidator.php para o diretório 
 
 ~~~
 protected/extensions/validators/
@@ -21,7 +24,6 @@ protected/extensions/validators/
 No método rules() da sua classe de modelo, você deve incluir a chamada da extensão, da seguinte maneira:
 
 ~~~
-[php]
 public function rules()
 {
   return array(
@@ -35,7 +37,6 @@ public function rules()
 Por padrão a extensão valida qualquer número de telefone, caso queira validar somente números de telefones móveis (celulares), adicione o seguinte parâmetro.
 
 ~~~
-[php]
 public function rules()
 {
   return array(
@@ -49,7 +50,6 @@ public function rules()
 Por padrão a extensão aceita campos vazios ou nulos como verdadeiros, caso deseje remover esta aceitação, adicione o seguinte parâmetro:
 
 ~~~
-[php]
 public function rules()
 {
   return array(
@@ -63,7 +63,6 @@ public function rules()
 A extensão por padrão, também valida números de telefone sem máscaras, caso queira considerar a máscara na validação do número, adicione o seguinte parâmetro:
 
 ~~~
-[php]
 public function rules()
 {
   return array(
@@ -81,7 +80,6 @@ public function rules()
 Por último a mensagem exibida ao usuário pode ser customizada através da adição do parâmetro customMessage, da seguinte maneira.
 
 ~~~
-[php]
 public function rules()
 {
   return array(
